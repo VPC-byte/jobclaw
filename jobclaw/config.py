@@ -35,6 +35,14 @@ class Settings(BaseSettings):
     )
 
     boss_cookie: str | None = None
+    boss_greeting: str | None = Field(
+        default=None,
+        description="Greeting template for Boss直聘. Supports {company}, {title}, {name}.",
+    )
+    boss_apply_delay_min: float = Field(default=3.0, ge=0.5)
+    boss_apply_delay_max: float = Field(default=8.0, ge=1.0)
+    boss_daily_limit: int = Field(default=100, ge=1, le=150)
+    boss_skip_inactive_days: int = Field(default=7, ge=1)
     linkedin_cookie: str | None = None
 
     telegram_bot_token: str | None = None

@@ -27,6 +27,7 @@ class ApplicationStatus(str, Enum):
     REJECTED = "rejected"
     OFFER = "offer"
     FAILED = "failed"
+    CAPTCHA_BLOCKED = "captcha_blocked"
 
 
 class SalaryRange(BaseModel):
@@ -100,3 +101,9 @@ class Application(BaseModel):
     applied_at: datetime | None = None
     updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     extra: dict[str, Any] = Field(default_factory=dict)
+    # Common extra keys:
+    #   "reason": str — failure/skip reason (e.g. "captcha", "already_applied",
+    #                    "daily_limit", "button_not_found", "inactive_hr")
+    #   "greeting_sent": str — the actual greeting message sent
+    #   "hr_name": str — recruiter name if available
+    #   "response_time": float — seconds taken for the apply action
