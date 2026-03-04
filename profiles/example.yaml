@@ -1,0 +1,46 @@
+# JobClaw Profile Example
+# Copy this file and customize for your job search
+
+name: "Your Name"
+email: "you@example.com"
+years_experience: 3
+
+summary: >
+  Full-stack developer with experience in AI/ML applications,
+  cloud infrastructure, and DevOps. Looking for Agent/AI roles.
+
+skills:
+  - Python
+  - TypeScript
+  - LLM/Agent Development
+  - LangChain
+  - Kubernetes
+  - Docker
+  - AWS/GCP
+  - CI/CD
+  - Linux
+
+desired_roles:
+  - AI Agent Developer
+  - LLM Application Engineer
+  - MLOps Engineer
+  - Backend Developer (AI)
+  - DevOps/SRE
+
+preferences:
+  locations:
+    - "深圳"
+    - "remote"
+    - "香港"
+  salary_min: 25000   # Monthly, CNY
+  salary_max: 50000
+  work_schedule: "双休"
+  industries:
+    - AI
+    - Web3
+    - Cloud
+    - Gaming
+  deal_breakers:
+    - "996"
+    - "大小周"
+    - "无社保"

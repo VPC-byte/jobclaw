@@ -1,0 +1,73 @@
+[build-system]
+requires = ["hatchling>=1.24.2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jobclaw"
+version = "0.1.0"
+description = "AI-powered job hunting agent for scraping, matching, applying, and notifying."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "JobClaw Contributors" }
+]
+keywords = ["jobs", "automation", "llm", "playwright", "openclaw"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Software Development :: Libraries"
+]
+dependencies = [
+  "playwright>=1.50.0",
+  "langchain>=0.3.20",
+  "httpx>=0.28.1",
+  "pydantic>=2.10.6",
+  "pydantic-settings>=2.7.1",
+  "click>=8.1.8",
+  "PyYAML>=6.0.2"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.4",
+  "pytest-asyncio>=0.25.2",
+  "ruff>=0.9.7",
+  "mypy>=1.15.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/VPC-byte/jobclaw"
+Repository = "https://github.com/VPC-byte/jobclaw"
+Issues = "https://github.com/VPC-byte/jobclaw/issues"
+
+[project.scripts]
+jobclaw = "jobclaw.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["jobclaw"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_configs = true
+warn_return_any = true
+disallow_untyped_defs = true
+disallow_any_generics = false
+check_untyped_defs = true
