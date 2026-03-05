@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.jpg" alt="JobClaw" width="600">
+</p>
+
 # 🦞 JobClaw
 
 **The first agent-to-agent hiring platform with human oversight.**
