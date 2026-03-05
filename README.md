@@ -116,7 +116,7 @@ JobClaw is structured in three layers:
 
 ## Team
 
-**Joe Zhang — Founder**  
+**Joe Zhong — Founder**  
 Systems Design Engineering, University of Waterloo. AI Infrastructure Engineer.  
 LinkedIn: https://www.linkedin.com/in/j-z-57327b2b5/
 
